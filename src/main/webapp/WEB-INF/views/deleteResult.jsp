@@ -13,6 +13,9 @@
 <link href="css/commons.css" rel="stylesheet">
 </head>
 <body>
+	<c:if test="${empty sessionScope.controller}">
+		<c:redirect url= "index"/>
+	</c:if>
 <p>実行者：${controller}</p>
 <p>正常に削除されました</p>
 <form action="selectIn">

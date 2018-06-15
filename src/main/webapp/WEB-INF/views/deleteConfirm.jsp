@@ -12,6 +12,9 @@
 <link href="css/commons.css" rel="stylesheet">
 </head>
 <body>
+	<c:if test="${empty sessionScope.controller}">
+		<c:redirect url= "index"/>
+	</c:if>
 	<p>これでよろしいですか？</p>
 
 	<form:form action="deleteConfirm" modelAttribute="command">

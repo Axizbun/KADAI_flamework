@@ -11,6 +11,9 @@
 <link href="/css/commons.css" rel="stylesheet">
 </head>
 <body>
+	<c:if test="${empty sessionScope.controller}">
+		<c:redirect url= "index"/>
+	</c:if>
 <c:if test="${not empty msg}">
 	<div class = "message"><p><span class="required"></span>${msg}</p></div>
 </c:if>

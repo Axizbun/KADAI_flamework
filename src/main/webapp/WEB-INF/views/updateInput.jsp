@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html>
@@ -9,7 +10,9 @@
 <link href="/css/commons.css" rel="stylesheet">
 </head>
 <body>
-
+	<c:if test="${empty sessionScope.controller}">
+		<c:redirect url= "index"/>
+	</c:if>
 	<p>
 		１箇所以上の項目を変更してください<br> <span class="required"></span>IDは変更できません
 	</p>

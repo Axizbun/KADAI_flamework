@@ -6,12 +6,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <title>登録画面</title>
 <link href="${pageContext.request.contextPath}/css/commons.css"
 	rel="stylesheet">
 </head>
 <body>
+	<c:if test="${empty sessionScope.controller}">
+		<c:redirect url= "index"/>
+	</c:if>
 	<p>
 		登録情報を入力してください<br> <span class="required"></span>は必須です
 	</p>

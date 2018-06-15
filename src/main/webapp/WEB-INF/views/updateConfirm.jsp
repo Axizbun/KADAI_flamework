@@ -24,6 +24,9 @@
 </style>
 </head>
 <body>
+	<c:if test="${empty sessionScope.controller}">
+		<c:redirect url= "index"/>
+	</c:if>
 	<p>これでよろしいですか？</p>
 
 	<c:if test="${not empty error}">

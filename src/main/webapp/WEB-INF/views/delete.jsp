@@ -12,6 +12,9 @@
 <link href="css/commons.css" rel="stylesheet">
 </head>
 <body>
+	<c:if test="${empty sessionScope.controller}">
+		<c:redirect url= "index"/>
+	</c:if>
 	<p>
 		削除を行うデータのIDを入力してください<br> <span class="required"></span>は必須です
 	</p>

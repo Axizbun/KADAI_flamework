@@ -13,6 +13,9 @@
 	rel="stylesheet">
 </head>
 <body>
+	<c:if test="${empty sessionScope.controller}">
+		<c:redirect url= "index"/>
+	</c:if>
 	<p>実行者：${fn:escapeXml(controller)}</p>
 	<p>正常に登録されました</p>
 	<form:form action="selectIn" modelAttribute = "command">
